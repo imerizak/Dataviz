@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <title>World Choropleth Map</title>
+  <title>Carte du monde par le nombre des films réalisés</title>
   <link href="https://playground.anychart.com/gallery/src/Maps_General_Features/World_Choropleth_Map/iframe" rel="canonical">
   <meta content="AJAX Chart,Chart from JSON,Choropleth Map,Dot Chart,Geo Chart,Geo Visualization,JSON Chart,JSON Plot,Marker Chart,Statistical Data,Tooltip" name="keywords">
   <meta content="AnyChart - JavaScript Charts designed to be embedded and integrated" name="description">
@@ -40,7 +40,7 @@ body,
 .defer(d3.json, "data/csvjson.json")
 .awaitAll(function(error, results) {
     if (error) throw error;
-    console.log(results);
+    //console.log(results);
    
   
     results[0].forEach(function(d){
@@ -49,18 +49,20 @@ body,
       words.forEach(function(item){
         if(listCountry[item]==null||listCountry[item]=="")
      {listCountry[item]=1;
-      listCountryBudget[item]=d['Budget_dls'];
+      listCountryBudget[item]=parseInt(d['Budget_dls']);
+     // console.log(item);
+      //console.log(d['Budget_dls']);
     }
       
      else{
-      listCountry[item]=listCountry[item]+1;
-      listCountryBudget[item]=listCountryBudget[item]+d['Budget_dls'];
+      listCountry[item]=parseInt(listCountry[item])+1;
+      listCountryBudget[item]=parseInt(listCountryBudget[item])+parseInt(d['Budget_dls']);
      }
     });
     
 
     });
-  //  console.log(listCountry);
+    console.log(listCountry);
   var q2 = d3.queue()
 .defer(d3.json, "data/data.json")
 .awaitAll(function(error, results) {
@@ -69,12 +71,15 @@ body,
     //console.log(results);
   
     results[0].forEach(function(d){
+      if(listCountry[d['name']]!=null&&listCountry[d['name']]!="")
+     {
       d['nombre de film']=listCountry[d['name']];
       d['budget']=listCountryBudget[d['name']];
+     }
      // console.log(d);
 
     });
-    console.log(results);
+    //console.log(results);
     carte(results[0]);
   //  console.log(listCountry);
 });
