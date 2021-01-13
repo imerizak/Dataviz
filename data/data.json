@@ -1,0 +1,1447 @@
+[{
+    "name": "Monaco",
+    "id": "MC",
+    "area": "2",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Singapore",
+    "id": "SG",
+    "area": "719",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Hong Kong",
+    "id": "HK",
+    "area": "1104",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Vatican City",
+    "id": "VA",
+    "area": "0.44",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Bahrain",
+    "id": "BH",
+    "area": "757",
+    "nombre de film":0 ,
+    "budget": 0
+}, {
+    "name": "Malta",
+    "id": "MT",
+    "area": "315",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Bermuda",
+    "id": "BM",
+    "area": "53",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Bangladesh",
+    "id": "BD",
+    "area": "143998",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Maldives",
+    "id": "MV",
+    "area": "298",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Barbados",
+    "id": "BB",
+    "area": "430",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Mauritius",
+    "id": "MU",
+    "area": "2040",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "San Marino",
+    "id": "SM",
+    "area": "61",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Aruba",
+    "id": "AW",
+    "area": "193",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Lebanon",
+    "id": "LB",
+    "area": "10452",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Rwanda",
+    "id": "RW",
+    "area": "25314",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Comoros",
+    "id": "KM",
+    "area": "1861",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Netherlands",
+    "id": "NL",
+    "area": "41526",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Haiti",
+    "id": "HT",
+    "area": "27065",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Puerto Rico",
+    "id": "PR",
+    "area": "8868",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "India",
+    "id": "IN",
+    "area": "3287240",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Israel",
+    "id": "IL",
+    "area": "22072",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Belgium",
+    "id": "BE",
+    "area": "30528",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Burundi",
+    "id": "BI",
+    "area": "27816",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Philippines",
+    "id": "PH",
+    "area": "300000",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Japan",
+    "id": "JP",
+    "area": "377944",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Sri Lanka",
+    "id": "LK",
+    "area": "65610",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "El Salvador",
+    "id": "SV",
+    "area": "21040",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Grenada",
+    "id": "GD",
+    "area": "344",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "American Samoa",
+    "id": "AS",
+    "area": "197",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Vietnam",
+    "id": "VN",
+    "area": "331212",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "UK",
+    "id": "GB",
+    "area": "242910",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Trinidad and Tobago",
+    "id": "TT",
+    "area": "5155",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Jamaica",
+    "id": "JM",
+    "area": "10991",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Pakistan",
+    "id": "PK",
+    "area": "803940",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Liechtenstein",
+    "id": "LI",
+    "area": "160",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Germany",
+    "id": "DE",
+    "area": "357168",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Dominican Republic",
+    "id": "DO",
+    "area": "47875",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Cayman Islands",
+    "id": "KY",
+    "area": "259",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Luxembourg",
+    "id": "LU",
+    "area": "2586",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Italy",
+    "id": "IT",
+    "area": "301308",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Kuwait",
+    "id": "KW",
+    "area": "17818",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Switzerland",
+    "id": "CH",
+    "area": "41285",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Seychelles",
+    "id": "SC",
+    "area": "455",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "British Virgin Islands",
+    "id": "VG",
+    "area": "151",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Antigua and Barbuda",
+    "id": "AG",
+    "area": "442",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Nigeria",
+    "id": "NG",
+    "area": "923768",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Nepal",
+    "id": "NP",
+    "area": "147181",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Qatar",
+    "id": "QA",
+    "area": "11571",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Gambia",
+    "id": "GM",
+    "area": "10690",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Andorra",
+    "id": "AD",
+    "area": "464",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Uganda",
+    "id": "UG",
+    "area": "241551",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Cyprus",
+    "id": "CY",
+    "area": "5896",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Tonga",
+    "id": "TO",
+    "area": "720",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Guatemala",
+    "id": "GT",
+    "area": "108889",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Anguilla",
+    "id": "AI",
+    "area": "96",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Czech Republic",
+    "id": "CZ",
+    "area": "78867",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Denmark",
+    "id": "DK",
+    "area": "43098",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Thailand",
+    "id": "TH",
+    "area": "513120",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Indonesia",
+    "id": "ID",
+    "area": "1904569",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Poland",
+    "id": "PL",
+    "area": "312685",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Cape Verde",
+    "id": "CV",
+    "area": "4033",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Malawi",
+    "id": "MW",
+    "area": "118484",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "France",
+    "id": "FR",
+    "area": "543965",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Syria",
+    "id": "SY",
+    "area": "185180",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Portugal",
+    "id": "PT",
+    "area": "92090",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Slovakia",
+    "id": "SK",
+    "area": "49036",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Togo",
+    "id": "TG",
+    "area": "56600",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Azerbaijan",
+    "id": "AZ",
+    "area": "86600",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Hungary",
+    "id": "HU",
+    "area": "93029",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Moldova",
+    "id": "MD",
+    "area": "33843",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Ghana",
+    "id": "GH",
+    "area": "238533",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Cuba",
+    "id": "CU",
+    "area": "109886",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Armenia",
+    "id": "AM",
+    "area": "29743",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Slovenia",
+    "id": "SI",
+    "area": "20273",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Austria",
+    "id": "AT",
+    "area": "83879",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Turkey",
+    "id": "TR",
+    "area": "783562",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "United Arab Emirates",
+    "id": "AE",
+    "area": "83600",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Albania",
+    "id": "AL",
+    "area": "28703",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Dominica",
+    "id": "DM",
+    "area": "739",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Spain",
+    "id": "ES",
+    "area": "505990",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Serbia",
+    "id": "RS",
+    "area": "77474",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Benin",
+    "id": "BJ",
+    "area": "112622",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Costa Rica",
+    "id": "CR",
+    "area": "51100",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Malaysia",
+    "id": "MY",
+    "area": "330803",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Egypt",
+    "id": "EG",
+    "area": "1002450",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Sierra Leone",
+    "id": "SL",
+    "area": "71740",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Romania",
+    "id": "RO",
+    "area": "238391",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Cambodia",
+    "id": "KH",
+    "area": "181035",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Greece",
+    "id": "GR",
+    "area": "131957",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Ethiopia",
+    "id": "ET",
+    "area": "1063652",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Iraq",
+    "id": "IQ",
+    "area": "434128",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Kenya",
+    "id": "KE",
+    "area": "581834",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Myanmar",
+    "id": "MM",
+    "area": "676577",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Croatia",
+    "id": "HR",
+    "area": "56542",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Honduras",
+    "id": "HN",
+    "area": "112088",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Ukraine",
+    "id": "UA",
+    "area": "603628",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Bosnia and Herzegovina",
+    "id": "BA",
+    "area": "51209",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Morocco",
+    "id": "MA",
+    "area": "446550",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Jordan",
+    "id": "JO",
+    "area": "89342",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Swaziland",
+    "id": "SZ",
+    "area": "17364",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Senegal",
+    "id": "SN",
+    "area": "196722",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Uzbekistan",
+    "id": "UZ",
+    "area": "444103",
+     "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Lesotho",
+    "id": "LS",
+    "area": "30355",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Brunei",
+    "id": "BN",
+    "area": "5765",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Tunisia",
+    "id": "TN",
+    "area": "163610",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Bulgaria",
+    "id": "BG",
+    "area": "111002",
+     "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Ireland",
+    "id": "IE",
+    "area": "70273",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Georgia",
+    "id": "GE",
+    "area": "69700",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Burkina Faso",
+    "id": "BF",
+    "area": "270764",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Cook Islands",
+    "id": "CK",
+    "area": "237",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Ecuador",
+    "id": "EC",
+    "area": "255595",
+     "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Mexico",
+    "id": "MX",
+    "area": "1967138",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Equatorial Guinea",
+    "id": "GQ",
+    "area": "28051",
+     "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Tajikistan",
+    "id": "TJ",
+    "area": "143100",
+       "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Yemen",
+    "id": "YE",
+    "area": "455000",
+       "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Eritrea",
+    "id": "ER",
+    "area": "121100",
+       "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Tanzania",
+    "id": "TZ",
+    "area": "883749",
+       "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Nicaragua",
+    "id": "NI",
+    "area": "121428",
+      "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Iran",
+    "id": "IR",
+    "area": "1648195",
+      "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Fiji",
+    "id": "FJ",
+    "area": "18333",
+      "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Panama",
+    "id": "PA",
+    "area": "74177",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Belarus",
+    "id": "BY",
+    "area": "207600",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Lithuania",
+    "id": "LT",
+    "area": "65300",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Montenegro",
+    "id": "ME",
+    "area": "13812",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Cameroon",
+    "id": "CM",
+    "area": "466050",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Guinea",
+    "id": "GN",
+    "area": "245857",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "South Africa",
+    "id": "ZA",
+    "area": "1220813",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Palau",
+    "id": "PW",
+    "area": "488",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Guinea-Bissau",
+    "id": "GW",
+    "area": "36125",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Colombia",
+    "id": "CO",
+    "area": "1141748",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Afghanistan",
+    "id": "AF",
+    "area": "645807",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Djibouti",
+    "id": "DJ",
+    "area": "23000",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Liberia",
+    "id": "LR",
+    "area": "97036",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Madagascar",
+    "id": "MG",
+    "area": "587041",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Faroe Islands",
+    "id": "FO",
+    "area": "1399",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Zimbabwe",
+    "id": "ZW",
+    "area": "390757",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "USA",
+    "id": "US",
+    "area": "9826675",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Venezuela",
+    "id": "VE",
+    "area": "916445",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Latvia",
+    "id": "LV",
+    "area": "64562",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Mozambique",
+    "id": "MZ",
+    "area": "799380",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Kyrgyzstan",
+    "id": "KG",
+    "area": "199945",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Estonia",
+    "id": "EE",
+    "area": "45339",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Laos",
+    "id": "LA",
+    "area": "236800",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Bahamas",
+    "id": "BS",
+    "area": "13940",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Brazil",
+    "id": "BR",
+    "area": "8515767",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Peru",
+    "id": "PE",
+    "area": "1285216",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Chile",
+    "id": "CL",
+    "area": "756096",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Sweden",
+    "id": "SE",
+    "area": "449964",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Bhutan",
+    "id": "BT",
+    "area": "38394",
+      "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Uruguay",
+    "id": "UY",
+    "area": "176215",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Finland",
+    "id": "FI",
+    "area": "338424",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "South Sudan",
+    "id": "SS",
+    "area": "644329",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Zambia",
+    "id": "ZM",
+    "area": "752612",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Sudan",
+    "id": "SD",
+    "area": "1839542",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "New Zealand",
+    "id": "NZ",
+    "area": "270467",
+      "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Angola",
+    "id": "AO",
+    "area": "1246700",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Paraguay",
+    "id": "PY",
+    "area": "406752",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Algeria",
+    "id": "DZ",
+    "area": "2381741",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Norway",
+    "id": "NO",
+    "area": "323782",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Papua New Guinea",
+    "id": "PG",
+    "area": "462840",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Somalia",
+    "id": "SO",
+    "area": "637657",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Niger",
+    "id": "NE",
+    "area": "1186408",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Argentina",
+    "id": "AR",
+    "area": "2780400",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Belize",
+    "id": "BZ",
+    "area": "22965",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Saudi Arabia",
+    "id": "SA",
+    "area": "2149690",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Oman",
+    "id": "OM",
+    "area": "309500",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Mali",
+    "id": "ML",
+    "area": "1248574",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Turkmenistan",
+    "id": "TM",
+    "area": "491210",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Bolivia",
+    "id": "BO",
+    "area": "1098581",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Chad",
+    "id": "TD",
+    "area": "1284000",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Russia",
+    "id": "RU",
+    "area": "17098242",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Central African Republic",
+    "id": "CF",
+    "area": "622436",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Gabon",
+    "id": "GA",
+    "area": "267667",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Kazakhstan",
+    "id": "KZ",
+    "area": "2724900",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Guyana",
+    "id": "GY",
+    "area": "214999",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Canada",
+    "id": "CA",
+    "area": "9984670",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Libya",
+    "id": "LY",
+    "area": "1770060",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Botswana",
+    "id": "BW",
+    "area": "581730",
+     "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Mauritania",
+    "id": "MR",
+    "area": "1030700",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Suriname",
+    "id": "SR",
+    "area": "163820",
+     "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Iceland",
+    "id": "IS",
+    "area": "102800",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Australia",
+    "id": "AU",
+    "area": "7692024",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Namibia",
+    "id": "NA",
+    "area": "825118",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Western Sahara",
+    "id": "EH",
+    "area": "252120",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Mongolia",
+    "id": "MN",
+    "area": "1564100",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Pitcairn Islands",
+    "id": "PN",
+    "area": "47",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Falkland Islands",
+    "id": "FK",
+    "area": "12173",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Greenland",
+    "id": "GL",
+    "area": "2166000",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Macau",
+    "id": "MO",
+    "area": "30.3",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Gibraltar",
+    "id": "GI",
+    "area": "7",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Sint Maarten",
+    "id": "SX",
+    "area": "34",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Jersey",
+    "id": "JE",
+    "area": "116",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Guernsey",
+    "id": "GG",
+    "area": "78",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Palestine",
+    "id": "PS",
+    "area": "6020",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Taiwan",
+    "id": "TW",
+    "area": "36191",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Mayotte",
+    "id": "YT",
+    "area": "374",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "South Korea",
+    "id": "KR",
+    "area": "100210",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Nauru",
+    "id": "NR",
+    "area": "21",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Tuvalu",
+    "id": "TV",
+    "area": "26",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Saint Barthélemy",
+    "id": "BL",
+    "area": "21",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Martinique",
+    "id": "MQ",
+    "area": "1128",
+     "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Curaçao",
+    "id": "CW",
+    "area": "444",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Réunion",
+    "id": "RE",
+    "area": "2512",
+     "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Marshall Islands",
+    "id": "MH",
+    "area": "181",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "United States Virgin Islands",
+    "id": "VI",
+    "area": "352",
+      "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Guam",
+    "id": "GU",
+    "area": "541",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Saint Lucia",
+    "id": "LC",
+    "area": "617",
+      "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Saint Vincent and the Grenadines",
+    "id": "VC",
+    "area": "389",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Guadeloupe",
+    "id": "GP",
+    "area": "1630",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "North Korea",
+    "id": "KP",
+    "area": "122762",
+     "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Saint Kitts and Nevis",
+    "id": "KN",
+    "area": "270",
+     "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "São Tomé and Príncipe",
+    "id": "\tST",
+    "area": "1001",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Kosovo",
+    "id": "XK",
+    "area": "10910",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Isle of Man",
+    "id": "IM",
+    "area": "572",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Kiribati",
+    "id": "KI",
+    "area": "726",
+       "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Federated States of Micronesia",
+    "id": "FM",
+    "area": "701",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "China",
+    "id": "CN",
+    "area": "9640821",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Tokelau",
+    "id": "TK",
+    "area": "10",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Northern Mariana Islands",
+    "id": "MP",
+    "area": "457",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Macedonia",
+    "id": "MK",
+    "area": "25713",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "French Polynesia",
+    "id": "PF",
+    "area": "3521",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Ivory Coast",
+    "id": "CI",
+    "area": "322921",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Timor-Leste",
+    "id": "TL",
+    "area": "14919",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Samoa",
+    "id": "WS",
+    "area": "2831",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Caribbean Netherlands",
+    "id": "BQ",
+    "area": "322",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Norfolk Island",
+    "id": "NF",
+    "area": "35",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Turks and Caicos Islands",
+    "id": "TC",
+    "area": "497",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Montserrat",
+    "id": "MS",
+    "area": "102",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Wallis and Futuna",
+    "id": "WF",
+    "area": "274",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Cocos Islands",
+    "id": "CC",
+    "area": "14",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Saint Helena, Ascension and Tristan da Cunha",
+    "id": "SH",
+    "area": "122",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Democratic Republic of the Congo",
+    "id": "CD",
+    "area": "2345095",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Saint Pierre and Miquelon",
+    "id": "PM",
+    "area": "242",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Vanuatu",
+    "id": "VU",
+    "area": "12190",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Solomon Islands",
+    "id": "SB",
+    "area": "28370",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Christmas Island",
+    "id": "CX",
+    "area": "137",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "New Caledonia",
+    "id": "NC",
+    "area": "18575",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Republic of the Congo",
+    "id": "CG",
+    "area": "342000",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Niue",
+    "id": "NU",
+    "area": "261",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "French Guiana",
+    "id": "GF",
+    "area": "86504",
+    "nombre de film": 0,
+    "budget": 0
+}, {
+    "name": "Svalbard and Jan Mayen",
+    "id": "SJ",
+    "area": "61399",
+    "nombre de film": 0,
+    "budget": 0
+}]
