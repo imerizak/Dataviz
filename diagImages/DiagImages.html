@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./cerabox/cerabox.css" type="text/css" media="screen">
 <style>
-body { font-family:arial; font-size:80%; }
+
 
 #viz { padding:1em;  }
 
@@ -138,7 +138,7 @@ jQuery(document).ready(function() {
 				else if(row.Period == "Période 2") classe = "bh";
 				else if(row.Period == "Période 3") classe = "lw";
 				
-				sliceColor[i] = '<a id="linkBar" class="ceraBox" onMouseOver="copyImageBar(this);" onMouseOut="resetBorder(this)" href="klee-original-size/'+row.File+'" title="'+ row.Title +', '+row.Year+'" name="'+i+'"><span style="background-color:hsl(';
+				sliceColor[i] = '<a id="linkBar" class="ceraBox" onMouseOver="copyImageBar(this);" onMouseOut="resetBorder(this)" href="./data/Images/'+row.File+'" title="'+ row.Title +', '+row.Year+'" name="'+i+'"><span style="background-color:hsl(';
 				sliceColor[i] += row.hue_median + ',' + (row.saturation_median*100)/255 + '%,' + (row.brightness_median*100)/255 + '%); height:'+ 5 +'px; width:15px; top:'+ Math.sin(row.hue_median*0.0174) * 150 +'px; left:'+ Math.cos(row.hue_median*0.0174) * 150 +'px; transform:translate(400px, 400px) rotate('+row.hue_median+'deg) scaleX('+row.saturation_median/15+') scaleY('+row.brightness_median/100+') translateX(7px);" class="slice" title="'+ row.Title +', '+row.Year+'" id="slic'+i+'">'; 
 				sliceColor[i] += '<img class="mini-painting" onMouseOver="copyImage(this);" onMouseOut="resetBorder(this)" src="./data/Images/'+row.File + '" title="'+ row.Title +', '+row.Year+'" style="width:15px; opacity:1.0;" name="'+i+'">';
 				sliceColor[i] += '</span></a>';
