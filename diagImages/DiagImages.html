@@ -142,10 +142,10 @@ jQuery(document).ready(function() {
 				sliceColor[i] += '<img class="mini-painting" onMouseOver="copyImage(this);" onMouseOut="resetBorder(this)" src="./data/Images/'+row.File + '" title="'+ row.Title +', '+row.Year+'" style="width:15px; opacity:1.0;" name="'+i+'">';
 				sliceColor[i] += '</span></a>';
 
-				pochette[i] = '<img onClick="copyImage(this);" src="klee-original-size/';
+				pochette[i] = '<img onClick="copyImage(this);" src="./data/Images/';
 				pochette[i] += row.File + '" title="'+ row.Title +'">';
 
-				mosaicRect[i] = '<a id="linkBar2" class="ceraBox" onMouseOver="copyImageBar(this);" href="klee-original-size/'+row.File+'" title="'+ row.Title +', '+row.Year+'">';
+				mosaicRect[i] = '<a id="linkBar2" class="ceraBox" onMouseOver="copyImageBar(this);" href="./data/Images/'+row.File+'" title="'+ row.Title +', '+row.Year+'">';
 				mosaicRect[i] += '<img id="mos'+i+'" name="'+i+'" class="mosaic-painting" onMouseOver="copyImage(this);" onMouseOut="resetBorder(this)" src="./data/Images/'+row.File + '" title="'+ row.Title +', '+row.Year+'">';
 				mosaicRect[i] += '</a>';
 
