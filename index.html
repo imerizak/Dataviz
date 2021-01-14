@@ -82,7 +82,7 @@
             <a type="button" class="nav-link">Map</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" type="button">Diagramme à barre radiale empilées</a>
+            <a class="nav-link" type="button" href="./newGraph/index.html">Diagramme à barre radiale empilées</a>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link" type="button">Graphs</a>
@@ -101,19 +101,16 @@
       console.log("clicked");
       if ($(this).html().includes("Map")) {
         console.log("loaded");
-        $("#Content").load("./map.html");
-      }
-      if ($(this).html().includes("Diagramme à barre radiale empilées")) {
-        $("#Content").load("./newGraph/index.html");
+        $("#Content").load("./map/map.html");
       }
       if ($(this).html().includes("Images")) {
-        $("#Content").load("./imageVis.html");
+        $("#Content").load("./diagImages/imageVis.html");
       }
       /* if ($(this).html().includes("Graphs")) {
-        $("#Content").load("./charts.html");
+        $("#Content").load("./charts/charts.html");
       } */
       if ($(this).html().includes("Diagramme Images")) {
-        $("#Content").load("./DiagImages.html");
+        $("#Content").load("./diagImages/DiagImages.html");
       }
     });
     $(".navbar-brand").click(function () {
