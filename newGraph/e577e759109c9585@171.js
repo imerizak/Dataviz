@@ -13,7 +13,7 @@ md`# Top 50 réalisateur de film
   const svg = d3.select(DOM.svg(width, height))
       .attr("viewBox", `${-width / 2} ${-height * 0.69} ${width} ${height}`)
       .style("width", "80%")
-      .style("height", "auto")
+      .style("height", "1300px")
       .style("font", "10px sans-serif");
 
   svg.append("g")
