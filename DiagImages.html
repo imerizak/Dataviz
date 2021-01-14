@@ -216,7 +216,7 @@ function copyImage(e){
 	 monImage.setAttribute('title', e.title); 
 	 
 	 var monImageLink = document.getElementById('link-fenetre');
-	 monImageLink.setAttribute('href', e.src.replace('klee-small/', 'klee-original-size/'));
+	 monImageLink.setAttribute('href', e.src.replace('./data/Images/', 'klee-original-size/'));
 	 monImageLink.setAttribute('title', e.title);
 	 
 	 var myNum = e.name; 
@@ -248,7 +248,7 @@ function resetBorder(e){
 function copyImageBar(e){
 	 
 	 var monImage = document.getElementById('fenetre');
-	 jQuery('#fenetre').attr('src', e.href.replace('klee-original-size/', 'klee-small/'));
+	 jQuery('#fenetre').attr('src', e.href.replace('klee-original-size/', './data/Images/'));
 	 monImage.setAttribute('title', e.title);
 
 	 var monImageLink = document.getElementById('link-fenetre');
@@ -265,7 +265,7 @@ function copyImageBar(e){
 function bigImage(e){
 
 	 var monImage = document.getElementById('bigPic');
-	 monImage.setAttribute('src', e.src.replace('klee-small/', 'klee-original-size/'));
+	 monImage.setAttribute('src', e.src.replace('./data/Images/', 'klee-original-size/'));
 	 monImage.setAttribute('title', e.title); 
 }
 
@@ -274,7 +274,7 @@ function enlargeColored(e){
 	 eraseThumb.setAttribute('src', '');
 
 	 var monImage = document.getElementById('bigPic');
-	 monImage.setAttribute('src', e.src.replace('klee-small/', 'klee-original-size/'));
+	 monImage.setAttribute('src', e.src.replace('./data/Images/', 'klee-original-size/'));
 	 monImage.setAttribute('title', e.title); 
 	 $$('a.ceraBox').cerabox();	
 }
