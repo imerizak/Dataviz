@@ -12,8 +12,8 @@ md`# Top 50 réalisateur de film
 {
   const svg = d3.select(DOM.svg(width, height))
       .attr("viewBox", `${-width / 2} ${-height * 0.69} ${width} ${height}`)
-      .style("width", " 800px")
-      .style("height", "650px")
+      .style("width", "80%")
+      .style("height", "auto")
       .style("font", "10px sans-serif");
 
   svg.append("g")
@@ -143,7 +143,7 @@ width
 180
 )});
   main.variable(observer("outerRadius")).define("outerRadius", ["width","height"], function(width,height){return(
-Math.min(width, height) * 0.67
+Math.min(width, height) * 0.5
 )});
   main.variable(observer("d3")).define("d3", ["require"], function(require){return(
 require("d3@6")
