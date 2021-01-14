@@ -1,4 +1,3 @@
-
 <!doctype html>
 <head>
 <meta charset="UTF-8">
@@ -72,18 +71,18 @@ var mosaicRect = [ ];
 var pochette = [ ];
 
 jQuery(document).ready(function() {
-    
+
 	var url="./data/Images/myData.json";
     var json = new Array();
-	
+
     jQuery.getJSON(url,function(data){
-        
+
 		json = data;
-		
+
     }).done(function(){
-        
+
 		sortJsonField();
-		
+
         jQuery('#sort-year').click(function(){
             sortJsonField("Year");
 			jQuery(this).css('font-weight','bold');
@@ -104,11 +103,11 @@ jQuery(document).ready(function() {
 			jQuery(this).css('font-weight','bold');
 			jQuery('.btns1').not(this).css('font-weight','normal');
         })
-		
+
     });
 
         function sortJsonField(field){
-			
+
             function sortJson(a,b){
                 if(field == "saturation_median"){ 
 					return a.saturation_median > b.saturation_median ? -1 : 1;
@@ -127,29 +126,29 @@ jQuery(document).ready(function() {
             showJSON();
         };
 
-        
+
         function showJSON(){
             jQuery('#output0,#output1,#output2,#output3,#titre1,#titre2,#titre3,#output5,#output6,#output7').empty();
-			
+
             jQuery.each(json.klee,function(i,row){ 
-				
+
 				var classe = "";
 				if(row.Period == "Période 1") classe = "ew";
 				else if(row.Period == "Période 2") classe = "bh";
 				else if(row.Period == "Période 3") classe = "lw";
-				
-				sliceColor[i] = '<a id="linkBar" class="ceraBox" onMouseOver="copyImageBar(this);" onMouseOut="resetBorder(this)" href="/data/Images/'+row.File+'" title="'+ row.Title +', '+row.Year+'" name="'+i+'"><span style="background-color:hsl(';
+
+				sliceColor[i] = '<a id="linkBar" class="ceraBox" onMouseOver="copyImageBar(this);" onMouseOut="resetBorder(this)" href="klee-original-size/'+row.File+'" title="'+ row.Title +', '+row.Year+'" name="'+i+'"><span style="background-color:hsl(';
 				sliceColor[i] += row.hue_median + ',' + (row.saturation_median*100)/255 + '%,' + (row.brightness_median*100)/255 + '%); height:'+ 5 +'px; width:15px; top:'+ Math.sin(row.hue_median*0.0174) * 150 +'px; left:'+ Math.cos(row.hue_median*0.0174) * 150 +'px; transform:translate(400px, 400px) rotate('+row.hue_median+'deg) scaleX('+row.saturation_median/15+') scaleY('+row.brightness_median/100+') translateX(7px);" class="slice" title="'+ row.Title +', '+row.Year+'" id="slic'+i+'">'; 
 				sliceColor[i] += '<img class="mini-painting" onMouseOver="copyImage(this);" onMouseOut="resetBorder(this)" src="./data/Images/'+row.File + '" title="'+ row.Title +', '+row.Year+'" style="width:15px; opacity:1.0;" name="'+i+'">';
 				sliceColor[i] += '</span></a>';
-				
+
 				pochette[i] = '<img onClick="copyImage(this);" src="klee-original-size/';
 				pochette[i] += row.File + '" title="'+ row.Title +'">';
-				
-				mosaicRect[i] = '<a id="linkBar2" class="ceraBox" onMouseOver="copyImageBar(this);" href="/data/Images/'+row.File+'" title="'+ row.Title +', '+row.Year+'">';
+
+				mosaicRect[i] = '<a id="linkBar2" class="ceraBox" onMouseOver="copyImageBar(this);" href="klee-original-size/'+row.File+'" title="'+ row.Title +', '+row.Year+'">';
 				mosaicRect[i] += '<img id="mos'+i+'" name="'+i+'" class="mosaic-painting" onMouseOver="copyImage(this);" onMouseOut="resetBorder(this)" src="./data/Images/'+row.File + '" title="'+ row.Title +', '+row.Year+'">';
 				mosaicRect[i] += '</a>';
-				
+
 				if(classe == "ew") {
 					jQuery('#output1').append(sliceColor[i]);
 					jQuery('#output5').append(mosaicRect[i]);
@@ -165,30 +164,30 @@ jQuery(document).ready(function() {
 					jQuery('#output7').append(mosaicRect[i]);
 					jQuery('#titre3').text(row.Period + ' (2003-2016)');
                 }	
-                
-				
+
+
             });
-			
-			
+
+
 
         };
 
 		jQuery('#view-minipaint').click(function(){
 				jQuery('.mini-painting').toggle();
 		});	
-		
-		
+
+
 		jQuery('#ou1').click(function(){
 			jQuery('#output1, #titre1, #output5').toggle();
 			jQuery(this).toggleClass('titreBtn');
-			
+
 		});
-		
+
 		jQuery('#ou2').click(function(){
 			jQuery('#output2, #titre2, #output6').toggle();
 			jQuery(this).toggleClass('titreBtn');
 		});
-		
+
 		jQuery('#ou3').click(function(){
 			jQuery('#output3, #titre3, #output7').toggle();
 			jQuery(this).toggleClass('titreBtn');
@@ -198,53 +197,53 @@ jQuery(document).ready(function() {
 			jQuery('#output1,#output2,#output3, #output5, #output6, #output7, #titre1, #titre2, #titre3').show();
 			jQuery('#ou1,#ou2,#ou3').addClass('titreBtn');
 		});		
-		
-		
+
+
         showJSON();
 		$$('a.ceraBox').cerabox();	
-		
+
 });
 
 
 
 function copyImage(e){
-	
+
 	 var monImage = document.getElementById('fenetre');
 	 monImage.setAttribute('src', e.src);
 	 monImage.setAttribute('title', e.title); 
-	 
+
 	 var monImageLink = document.getElementById('link-fenetre');
 	 monImageLink.setAttribute('href', e.src.replace('./data/Images/', 'klee-original-size/'));
 	 monImageLink.setAttribute('title', e.title);
-	 
+
 	 var myNum = e.name; 
 	 var monSlice = document.getElementById('slic' + e.name);
 	 jQuery(monSlice).css('border-top', '1px solid black');
 	 jQuery(monSlice).css('opacity', '1');
 	 jQuery(monSlice).css('z-index', '300');
-	 
+
 	 var monMos = document.getElementById('mos' + e.name);
 	 jQuery(monMos).css('opacity', '1');
-	 
-	 
+
+
 	 jQuery('#pic-info').text(e.title);
 	 $$('a.ceraBox').cerabox();
 }
 
 function resetBorder(e){
-	 
+
 	 var myNum = e.name; 
 	 var monSlice = document.getElementById('slic' + e.name);
 	 jQuery(monSlice).css('border-top', '0px');
 	 jQuery(monSlice).css('opacity', '0.7');
 	 jQuery(monSlice).css('z-index', '10');
-	 
+
 	 var monMos = document.getElementById('mos' + e.name);
 	 jQuery(monMos).css('opacity', '0.7');
 }
 
 function copyImageBar(e){
-	 
+
 	 var monImage = document.getElementById('fenetre');
 	 jQuery('#fenetre').attr('src', e.href.replace('klee-original-size/', './data/Images/'));
 	 monImage.setAttribute('title', e.title);
@@ -255,7 +254,7 @@ function copyImageBar(e){
 
 	 var monMos = document.getElementById('mos' + e.name);
 	 jQuery(monMos).css('opacity', '1');
-	 
+
 	 jQuery('#pic-info').text(e.title);
 	 $$('a.ceraBox').cerabox();	
 }
@@ -285,7 +284,7 @@ function go(q) {
     var empty = q.test(/^ *jQuery/);
 }	
 
-  
+
 </script>
 
 <script>
@@ -293,7 +292,7 @@ function go(q) {
   q = q.replace(/^ */,'').replace(/ *$/,'')
   var r = new RegExp(q,"i");
   var empty = q.test(/^ *$/);
-  
+
   $('output1').getChildren().each(function(e){
 	e.setStyle('visibility', (empty || e.innerHTML.test(r) ? 'visible' : 'hidden'))
   })
@@ -317,7 +316,7 @@ function go(q) {
   $('output7').getChildren().each(function(e){
 	e.setStyle('visibility', (empty || e.innerHTML.test(r) ? 'visible' : 'hidden'))
   })
- 
+
 }
 
 </script>
@@ -327,7 +326,7 @@ function go(q) {
 </head>
 <body>
 <div id="viz">
-    
+
     <div id="controls">
     	<h2>Images Diagram</h2>
         <p>
@@ -348,7 +347,7 @@ function go(q) {
             Hide-show: <button id="view-minipaint" class="btns">image texture</button>
         </p>
     </div>
-    
+
     <p class="titrePeriode" id="titre0"></p>
     <div id="output0"></div>
     <div id="output3"></div>
