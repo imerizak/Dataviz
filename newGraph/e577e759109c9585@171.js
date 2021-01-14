@@ -1,8 +1,8 @@
 // https://observablehq.com/@d3/radial-stacked-bar-chart-ii@171
 export default function define(runtime, observer) {
   const main = runtime.module();
-  const fileAttachments = new Map([["data-2.csv","files/test.txt"]]);
-  main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
+ // const fileAttachments = new Map([["data-2.csv","files/test.txt"]]);
+  //main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer()).define(["md"], function(md){return(
 md`# Top 50 réalisateur de film
 
