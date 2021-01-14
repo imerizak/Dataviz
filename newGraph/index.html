@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Radial Stacked Bar Chart II</title>
+<link rel="stylesheet" type="text/css" href="./inspector.css">
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<body style="text-align: center;">
 
+    <script>
+
+        
+        </script>
+<script type="module">
+            import define from "./index.js";
+import {Runtime, Library, Inspector} from "./runtime.js";
+        var  listDirector=Array();
+        var  nombreFilmByDirector=Array();
+        var  listBudget=Array();
+        var  nombreVoteByDirector=Array();
+        var  i=0;
+         var q = d3.queue()
+         
+        .defer(d3.json, "../data/csvjson.json")
+        .awaitAll(function(error, results) {
+           if (error) throw error;
+           //console.log(results);
+          
+         
+           results[0].forEach(function(d){
+             var directorItem=d['Director'];
+             var words = directorItem.split('|');
+             words.forEach(function(item){
+               if(nombreFilmByDirector[item]==null||nombreFilmByDirector[item]=="")
+            {nombreFilmByDirector[item]=1;
+              listBudget[item]=parseInt(d['Budget_dls']);
+              nombreVoteByDirector[item]=parseInt(d['Votes']);
+              listDirector[i]=item;
+              i++;
+            // console.log(item);
+             //console.log(d['Budget_dls']);
+           }
+             
+            else{
+              nombreFilmByDirector[item]=parseInt(nombreFilmByDirector[item])+1;
+             listBudget[item]=parseInt(listBudget[item])+parseInt(d['Budget_dls']);
+             nombreVoteByDirector[item]=parseInt(listBudget[item])+parseInt(d['Votes']);
+            }
+           });
+           
+        
+           });
+           //console.log(nombreVoteByDirector);
+           //console.log(nombreVoteByDirector.sort());
+           var dd = Array();
+           var indice=0;
+           //console.log(listDirector) ;
+           for (let index = 0; index < 50; index++) {
+           
+            dd[indice]={'State':  listDirector[index], 'Nombre de films': nombreFilmByDirector[ listDirector[index]],'Budget moyen':  listBudget[ listDirector[index]]/nombreFilmByDirector[ listDirector[index]], 'Total votes': nombreVoteByDirector[ listDirector[index]],  'total':  (listBudget[ listDirector[index]]/nombreFilmByDirector[ listDirector[index]])+nombreVoteByDirector[ listDirector[index]]+nombreFilmByDirector[ listDirector[index]]};
+           indice++;
+           }
+        
+        
+         
+        
+        
+        //console.log(dd);
+        
+        console.log(dd.sort(function (a, b) {
+          return a.total - b.total;
+        }));
+        localStorage.setItem('RealisateurObject', JSON.stringify(dd.sort(function (a, b) {
+          return a.total - b.total;
+        })));
+
+
+const runtime = new Runtime();
+const main = runtime.module(define, Inspector.into(document.body));
+var elements = document.getElementsByClassName('observablehq');
+for (let index = 2; index < elements.length; index++) {
+    elements[index].style.display="none";
+    
+}
+        });
+
+
+</script>
