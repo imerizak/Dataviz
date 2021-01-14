@@ -70,7 +70,7 @@
       var gross = Array();
       var q = d3
         .queue()
-        .defer(d3.json, "../data/csvjson.json")
+        .defer(d3.json, "data/csvjson.json")
         .awaitAll(function (error, result) {
           if (error) throw error;
           result[0].forEach((d) => {
@@ -167,7 +167,7 @@
             ")"
         );
 
-      d3.csv("../data/IMDB_2280_Most_Voted_Movies.csv", function (data) {
+      d3.csv("data/IMDB_2280_Most_Voted_Movies.csv", function (data) {
         console.log(data);
         var x = d3
           .scaleBand()
