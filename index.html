@@ -81,6 +81,9 @@
           <li class="nav-item">
             <a class="nav-link" type="button">Images</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" type="button">Diagram Images</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -102,6 +105,9 @@
       }
       if ($(this).html().includes("Graphs")) {
         $("#Content").load("./charts.html");
+      }
+      if ($(this).html().includes("Diagram Images")) {
+        $("#Content").load("./DiagImages.html");
       }
     });
     $(".navbar-brand").click(function () {
