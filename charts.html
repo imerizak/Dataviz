@@ -41,7 +41,7 @@
           id="circularBar"
           class="graph-card col-lg-5 m-3 d-flex flex-column align-items-center"
         >
-          <span class="">Votes et notes par genre</span>
+          <span class=""><span style="color: #ED504D;">Votes</span> et <span style="color: #69B3A2;">Notes</span> par genre</span>
         </div>
         <div
           class="graph-card col-lg-5 m-3 d-flex flex-column align-items-center"
@@ -57,11 +57,11 @@
     createStreamGraph();
 
     function createCircularBar() {
-      var margin = { top: 100, right: 0, bottom: 0, left: 0 },
+      var margin = { top: 60, right: 0, bottom: 0, left: 0 },
         width = 460 - margin.left - margin.right,
-        height = 460 - margin.top - margin.bottom,
+        height = 540 - margin.top - margin.bottom,
         innerRadius = 90,
-        outerRadius = Math.min(width, height) / 2; 
+        outerRadius = Math.min(width, height - 80) / 2; 
 
       var svg = d3
         .select("#circularBar")
@@ -88,8 +88,10 @@
             .align(0) 
             .domain(
               data.map(function (d) {
-                  console.log("Genre est " + d['genre'] )
-                return d['genre'];
+                if(d['index'] < 100){
+                  return d['genre'];
+                }
+                
               })
             ); 
 
@@ -118,13 +120,17 @@
                 .arc() 
                 .innerRadius(innerRadius)
                 .outerRadius(function (d) {
-                  return y(parseInt(d["rating"]*100));
+                  return y(parseInt(d["rating"]*1000));
                 })
                 .startAngle(function (d) {
-                  return x(d["genre"]);
+                  if(d["index"] < 100){
+                    return x(d["genre"]);
+                  }
+                  
                 })
                 .endAngle(function (d) {
-                  return x(d["genre"]) + x.bandwidth();
+                  if(d['index'] < 100)
+                    return x(d["genre"]) + x.bandwidth();
                 })
                 .padAngle(0.01)
                 .padRadius(innerRadius)
@@ -144,7 +150,8 @@
                 : "start";
             })
             .attr("transform", function (d) {
-              return (
+              if(d['index'] < 100){
+                return (
                 "rotate(" +
                 (((x(d["genre"]) + x.bandwidth() / 2) * 180) / Math.PI - 90) +
                 ")" +
@@ -152,17 +159,23 @@
                 (y(parseInt(d["rating"])) + 10) +
                 ",0)"
               );
+              }
+              
             })
             .append("text")
             .text(function (d) {
-              return d["genre"];
+              if(d['index'] < 100)
+                return d["genre"];
             })
             .attr("transform", function (d) {
-              return (x(d["genre"]) + x.bandwidth() / 2 + Math.PI) %
+              if(d['index'] < 100){
+                return (x(d["genre"]) + x.bandwidth() / 2 + Math.PI) %
                 (2 * Math.PI) <
                 Math.PI
                 ? "rotate(180)"
                 : "rotate(0)";
+              }
+              
             })
             .style("font-size", "11px")
             .attr("alignment-baseline", "middle");
@@ -183,13 +196,15 @@
                   return ybis(0);
                 })
                 .outerRadius(function (d) {
-                  return ybis(d["rating"]*100);
+                  return ybis(d["votes"]/100);
                 })
                 .startAngle(function (d) {
-                  return x(d["genre"]);
+                  if(d['index'] < 100)
+                    return x(d["genre"]);
                 })
                 .endAngle(function (d) {
-                  return x(d["genre"]) + x.bandwidth();
+                  if(d['index'] < 100)
+                    return x(d["genre"]) + x.bandwidth();
                 })
                 .padAngle(0.01)
                 .padRadius(innerRadius)
