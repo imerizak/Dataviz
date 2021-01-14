@@ -76,14 +76,17 @@
             <a class="nav-link" type="button">Images</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" type="button">Diagramme Images</a>
+          </li>
+          <li class="nav-item">
             <a type="button" class="nav-link">Map</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" type="button">Diagramme à barre radiale empilées</a>
+          </li>
+          <!-- <li class="nav-item">
             <a class="nav-link" type="button">Graphs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" type="button">Diagram Images</a>
-          </li>
+          </li> -->
         </ul>
       </div>
     </nav>
@@ -100,13 +103,16 @@
         console.log("loaded");
         $("#Content").load("./map.html");
       }
+      if ($(this).html().includes("Diagramme à barre radiale empilées")) {
+        $("#Content").load("./newGraph/index.html");
+      }
       if ($(this).html().includes("Images")) {
         $("#Content").load("./imageVis.html");
       }
-      if ($(this).html().includes("Graphs")) {
+      /* if ($(this).html().includes("Graphs")) {
         $("#Content").load("./charts.html");
-      }
-      if ($(this).html().includes("Diagram Images")) {
+      } */
+      if ($(this).html().includes("Diagramme Images")) {
         $("#Content").load("./DiagImages.html");
       }
     });
