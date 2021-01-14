@@ -1,0 +1,379 @@
+
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="klee, visualization, software studies, everardo reyes, ereyes, paris, digital humanities">
+<meta name="description" content="Visualizing 203 paintings by German-Swiss painter Paul Klee">
+<link rel="stylesheet" href="style/cerabox.css" type="text/css" media="screen">
+<style>
+body { font-family:arial; font-size:80%; }
+
+#viz { padding:1em;  }
+
+.titre {
+	font-weight:normal;
+	border-bottom:1px #eee solid;
+	margin-bottom:3px;
+	list-style:none;
+}
+
+#controls { margin-left:130px; }
+
+.slice { 
+	position:absolute; opacity:0.7;
+}
+
+.slice:hover { 
+	position:absolute; opacity:1; border-top:1px solid black; z-index:1;
+}
+
+.mosaic-painting {
+	position:relative; width:23px; opacity:0.7;
+}
+
+#output2, #output3, #output4 {width:auto; height:auto; margin:auto; top:0;rigth:0;bottom:0;left:0; display:block;  }
+#mosaic { position:absolute; top:150px; left:850px; }
+#output5, #output6, #output7 {width:300px; height:auto; top:0;rigth:0;bottom:0;left:0; display:block;  }
+#popup { position:absolute; top:330px; left:310px; padding-left:2em; }
+
+#pic-info { width:170px; }
+
+.titrePeriode { font-weight:bold; clear:left; padding-top:10px;  }
+
+.titreBtn { font-weight:bold; }
+
+#credits {
+	position:absolute;
+	top:700px;
+	padding-top:3em;
+	padding-bottom:2em;
+	padding-left:150px;
+	font-size:90%;
+	background-color:white;
+	opacity:0.8;
+	float:left;
+	z-index:500;
+}
+
+</style>
+
+
+<script src="mootools/mootools-core-1.4.5.js"></script>
+<script src="mootools/mootools-more-1.4.0.1-assets.js"></script>
+<script src="cerabox/cerabox.min.js"></script>
+<script src="cerabox/jquery-1.11.1.min.js"></script>
+<script>jQuery.noConflict();</script>
+<script>
+
+</script>
+
+<script>
+
+var sliceColor = [ ];
+var mosaicRect = [ ];
+var pochette = [ ];
+
+jQuery(document).ready(function() {
+    
+	var url="data/Images/myData.json";
+    var json = new Array();
+	
+    jQuery.getJSON(url,function(data){
+        
+		json = data;
+		
+    }).done(function(){
+        
+		sortJsonField();
+		
+        jQuery('#sort-year').click(function(){
+            sortJsonField("Year");
+			jQuery(this).css('font-weight','bold');
+			jQuery('.btns1').not(this).css('font-weight','normal');
+        })
+        jQuery('#sort-sat').click(function(){
+            sortJsonField("saturation_median");
+			jQuery(this).css('font-weight','bold');
+			jQuery('.btns1').not(this).css('font-weight','normal');
+        })
+        jQuery('#sort-hue').click(function(){
+            sortJsonField("hue_median");
+			jQuery(this).css('font-weight','bold');
+			jQuery('.btns1').not(this).css('font-weight','normal');
+        })
+		jQuery('#sort-bri').click(function(){
+            sortJsonField("brightness_median");
+			jQuery(this).css('font-weight','bold');
+			jQuery('.btns1').not(this).css('font-weight','normal');
+        })
+		
+    });
+
+        function sortJsonField(field){
+			
+            function sortJson(a,b){
+                if(field == "saturation_median"){ 
+					return a.saturation_median > b.saturation_median ? -1 : 1;
+				}
+				else if(field == "hue_median"){ 
+					return a.hue_median > b.hue_median ? -1 : 1;
+				}
+				else if(field == "brightness_median"){ 
+					return a.brightness_median > b.brightness_median ? -1 : 1;
+				}
+				else { 
+					return a.Year > b.Year ? 1 : -1;
+				}
+            }
+            json.klee.sort(sortJson);
+            showJSON();
+        };
+
+        
+        function showJSON(){
+            jQuery('#output0,#output1,#output2,#output3,#titre1,#titre2,#titre3,#output5,#output6,#output7').empty();
+			
+            jQuery.each(json.klee,function(i,row){ 
+				
+				var classe = "";
+				if(row.Period == "Période 1") classe = "ew";
+				else if(row.Period == "Période 2") classe = "bh";
+				else if(row.Period == "Période 3") classe = "lw";
+				
+				sliceColor[i] = '<a id="linkBar" class="ceraBox" onMouseOver="copyImageBar(this);" onMouseOut="resetBorder(this)" href="klee-original-size/'+row.File+'" title="'+ row.Title +', '+row.Year+'" name="'+i+'"><span style="background-color:hsl(';
+				sliceColor[i] += row.hue_median + ',' + (row.saturation_median*100)/255 + '%,' + (row.brightness_median*100)/255 + '%); height:'+ 5 +'px; width:15px; top:'+ Math.sin(row.hue_median*0.0174) * 150 +'px; left:'+ Math.cos(row.hue_median*0.0174) * 150 +'px; transform:translate(400px, 400px) rotate('+row.hue_median+'deg) scaleX('+row.saturation_median/15+') scaleY('+row.brightness_median/100+') translateX(7px);" class="slice" title="'+ row.Title +', '+row.Year+'" id="slic'+i+'">'; 
+				sliceColor[i] += '<img class="mini-painting" onMouseOver="copyImage(this);" onMouseOut="resetBorder(this)" src="2018/'+row.File + '" title="'+ row.Title +', '+row.Year+'" style="width:15px; opacity:1.0;" name="'+i+'">';
+				sliceColor[i] += '</span></a>';
+				
+				pochette[i] = '<img onClick="copyImage(this);" src="klee-original-size/';
+				pochette[i] += row.File + '" title="'+ row.Title +'">';
+				
+				mosaicRect[i] = '<a id="linkBar2" class="ceraBox" onMouseOver="copyImageBar(this);" href="klee-original-size/'+row.File+'" title="'+ row.Title +', '+row.Year+'">';
+				mosaicRect[i] += '<img id="mos'+i+'" name="'+i+'" class="mosaic-painting" onMouseOver="copyImage(this);" onMouseOut="resetBorder(this)" src="data/Images/'+row.File + '" title="'+ row.Title +', '+row.Year+'">';
+				mosaicRect[i] += '</a>';
+				
+				if(classe == "ew") {
+					jQuery('#output1').append(sliceColor[i]);
+					jQuery('#output5').append(mosaicRect[i]);
+					jQuery('#titre1').text(row.Period + ' (1972-1992)');
+				}
+				else if(classe == "bh") {
+					jQuery('#output2').append(sliceColor[i]); 
+					jQuery('#output6').append(mosaicRect[i]);
+					jQuery('#titre2').text(row.Period + ' (1993-2002)');
+				}
+				else if(classe == "lw") {
+					jQuery('#output3').append(sliceColor[i]);
+					jQuery('#output7').append(mosaicRect[i]);
+					jQuery('#titre3').text(row.Period + ' (2003-2016)');
+                }	
+                
+				
+            });
+			
+			
+
+        };
+
+		jQuery('#view-minipaint').click(function(){
+				jQuery('.mini-painting').toggle();
+		});	
+		
+		
+		jQuery('#ou1').click(function(){
+			jQuery('#output1, #titre1, #output5').toggle();
+			jQuery(this).toggleClass('titreBtn');
+			
+		});
+		
+		jQuery('#ou2').click(function(){
+			jQuery('#output2, #titre2, #output6').toggle();
+			jQuery(this).toggleClass('titreBtn');
+		});
+		
+		jQuery('#ou3').click(function(){
+			jQuery('#output3, #titre3, #output7').toggle();
+			jQuery(this).toggleClass('titreBtn');
+		});
+
+		jQuery('#ou4').click(function(){
+			jQuery('#output1,#output2,#output3, #output5, #output6, #output7, #titre1, #titre2, #titre3').show();
+			jQuery('#ou1,#ou2,#ou3').addClass('titreBtn');
+		});		
+		
+		
+        showJSON();
+		$$('a.ceraBox').cerabox();	
+		
+});
+
+
+
+function copyImage(e){
+	
+	 var monImage = document.getElementById('fenetre');
+	 monImage.setAttribute('src', e.src);
+	 monImage.setAttribute('title', e.title); 
+	 
+	 var monImageLink = document.getElementById('link-fenetre');
+	 monImageLink.setAttribute('href', e.src.replace('klee-small/', 'klee-original-size/'));
+	 monImageLink.setAttribute('title', e.title);
+	 
+	 var myNum = e.name; 
+	 var monSlice = document.getElementById('slic' + e.name);
+	 jQuery(monSlice).css('border-top', '1px solid black');
+	 jQuery(monSlice).css('opacity', '1');
+	 jQuery(monSlice).css('z-index', '300');
+	 
+	 var monMos = document.getElementById('mos' + e.name);
+	 jQuery(monMos).css('opacity', '1');
+	 
+	 
+	 jQuery('#pic-info').text(e.title);
+	 $$('a.ceraBox').cerabox();
+}
+
+function resetBorder(e){
+	 
+	 var myNum = e.name; 
+	 var monSlice = document.getElementById('slic' + e.name);
+	 jQuery(monSlice).css('border-top', '0px');
+	 jQuery(monSlice).css('opacity', '0.7');
+	 jQuery(monSlice).css('z-index', '10');
+	 
+	 var monMos = document.getElementById('mos' + e.name);
+	 jQuery(monMos).css('opacity', '0.7');
+}
+
+function copyImageBar(e){
+	 
+	 var monImage = document.getElementById('fenetre');
+	 jQuery('#fenetre').attr('src', e.href.replace('klee-original-size/', 'klee-small/'));
+	 monImage.setAttribute('title', e.title);
+
+	 var monImageLink = document.getElementById('link-fenetre');
+	 monImageLink.setAttribute('href', e.href);
+	 monImageLink.setAttribute('title', e.title);
+
+	 var monMos = document.getElementById('mos' + e.name);
+	 jQuery(monMos).css('opacity', '1');
+	 
+	 jQuery('#pic-info').text(e.title);
+	 $$('a.ceraBox').cerabox();	
+}
+
+function bigImage(e){
+
+	 var monImage = document.getElementById('bigPic');
+	 monImage.setAttribute('src', e.src.replace('klee-small/', 'klee-original-size/'));
+	 monImage.setAttribute('title', e.title); 
+}
+
+function enlargeColored(e){	
+	var eraseThumb = document.getElementById('fenetre');
+	 eraseThumb.setAttribute('src', '');
+
+	 var monImage = document.getElementById('bigPic');
+	 monImage.setAttribute('src', e.src.replace('klee-small/', 'klee-original-size/'));
+	 monImage.setAttribute('title', e.title); 
+	 $$('a.ceraBox').cerabox();	
+}
+
+
+
+function go(q) {
+	q = q.replace(/^ */,'').replace(/ *jQuery/,'')
+    var r = new RegExp(q,"i");
+    var empty = q.test(/^ *jQuery/);
+}	
+
+  
+</script>
+
+<script>
+function go(q) {
+  q = q.replace(/^ */,'').replace(/ *$/,'')
+  var r = new RegExp(q,"i");
+  var empty = q.test(/^ *$/);
+  
+  $('output1').getChildren().each(function(e){
+	e.setStyle('visibility', (empty || e.innerHTML.test(r) ? 'visible' : 'hidden'))
+  })
+
+  $('output5').getChildren().each(function(e){
+	e.setStyle('visibility', (empty || e.innerHTML.test(r) ? 'visible' : 'hidden'))
+  })
+
+  $('output2').getChildren().each(function(e){
+	e.setStyle('visibility', (empty || e.innerHTML.test(r) ? 'visible' : 'hidden'))
+  })
+
+  $('output6').getChildren().each(function(e){
+	e.setStyle('visibility', (empty || e.innerHTML.test(r) ? 'visible' : 'hidden'))
+  })
+
+  $('output3').getChildren().each(function(e){
+	e.setStyle('visibility', (empty || e.innerHTML.test(r) ? 'visible' : 'hidden'))
+  })
+
+  $('output7').getChildren().each(function(e){
+	e.setStyle('visibility', (empty || e.innerHTML.test(r) ? 'visible' : 'hidden'))
+  })
+ 
+}
+
+</script>
+
+
+
+</head>
+<body>
+<div id="viz">
+    
+    <div id="controls">
+    	<h2>Paul Klee viz</h2>
+        <p>
+            Sort by:
+            <button id="sort-year" class="btns1">Year</button>
+            <button id="sort-hue" class="btns1">Hue</button>
+            <button id="sort-sat" class="btns1">Saturation</button>
+            <button id="sort-bri" class="btns1">Brightness</button> | 
+            Filter by title or year: <input type="text" id="seek" onkeyup="go(this.value)">
+        </p>
+        <p>
+            Hide-show periods: 
+            <button id="ou1" class="btns titreBtn">(1972-1992)</button>
+            <button id="ou2" class="btns titreBtn">(1993-2002)</button>
+            <button id="ou3" class="btns titreBtn">(2003-2016)</button>
+            <button id="ou4" class="btns titreBtn">All Periods</button>
+        </p>
+        <p>
+            Hide-show: <button id="view-minipaint" class="btns">image texture</button>
+        </p>
+    </div>
+    
+    <p class="titrePeriode" id="titre0"></p>
+    <div id="output0"></div>
+    <div id="output3"></div>
+    <div id="output2"></div>
+    <div id="output1"></div>
+    <div id="mosaic">
+    	<p class="titrePeriode" id="titre1"></p>
+        <div id="output5" class="gallery"></div>
+        <p class="titrePeriode" id="titre2"></p>
+        <div id="output6" class="gallery"></div>
+        <p class="titrePeriode" id="titre3"></p>
+        <div id="output7" class="gallery"></div>
+    </div>
+</div>
+
+<div id="popup">
+	<a id="link-fenetre" class="ceraBox"><img id="fenetre"></a> 
+    <p id="pic-info"></p>
+    <br><br>
+	<img id="bigPic"> 
+</div>
+
+
+</body>
+</html>
